@@ -1,98 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio | TechnoHacks</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Harmin Patel • Portfolio</title>
+  <meta name="description" content="Portfolio of Harmin Patel showcasing projects and skills." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-    <nav class="navbar">
-        <h1 class="logo">Portfo<span class="highlight">lio.</span></h1>
-        <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
+  <header class="site-header">
+    <a href="#" class="logo">Harmin<span>Patel</span></a>
+    <nav class="site-nav" aria-label="Primary">
+      <button class="nav-toggle" aria-expanded="false" aria-controls="menu">☰</button>
+      <ul id="menu">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="btn btn-primary">Contact</a></li>
+      </ul>
     </nav>
+    <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">🌙</button>
+  </header>
 
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h3>Hello, I am</h3>
-            <h1 class="glitch-name">ANSH KOSHTI</h1>
-            <h3 class="typing-text">I am a <span class="typewriter"></span></h3>
-            <p>Passionate about building full-stack applications and solving complex problems with code.</p>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-            <a href="#contact" class="btn">Hire Me</a>
+  <main>
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Hi, I'm <span class="accent">Harmin Patel</span></h1>
+        <p class="subtitle">Frontend developer crafting clean, responsive experiences.</p>
+        <div class="cta">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#skills" class="btn btn-outline">My Skills</a>
         </div>
-	<div class="hero-img">
-    	<img src="WhatsApp Image 2025-12-16 at 3.36.29 PM.jpeg" class="img-circle" alt="Ansh Koshti">
-	</div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="blob"></div>
+      </div>
     </section>
 
     <section id="about" class="section">
-        <h2 class="section-title">About <span class="highlight">Me</span></h2>
-        <div class="about-container">
-            <div class="card glass">
-                <h3>Who am I?</h3>
-                <p>I am a Computer Science student currently interning at TechnoHacks. I specialize in Web Development and have a strong foundation in Java, PHP, and Database Management. I love turning ideas into reality through code.</p>
-            </div>
+      <div class="section-header">
+        <h2>About</h2>
+        <p>Driven by simplicity and performance, I build user-first interfaces with modern web tools.</p>
+      </div>
+      <div class="about-grid">
+        <div class="card">
+          <h3>What I do</h3>
+          <p>I design and develop responsive websites, focusing on accessibility, performance, and delightful UI details.</p>
         </div>
+        <div class="card">
+          <h3>Highlights</h3>
+          <ul class="list">
+            <li><strong>Performance:</strong> Lighthouse-first mindset</li>
+            <li><strong>Accessibility:</strong> Semantic HTML & ARIA</li>
+            <li><strong>Quality:</strong> Clean, maintainable code</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <div class="section-header">
+        <h2>Projects</h2>
+        <p>Selected work showcasing UI, performance, and interactivity.</p>
+      </div>
+
+      <div class="toolbar">
+        <label class="filter">
+          <span>Filter:</span>
+          <select id="filterSelect" aria-label="Filter projects">
+            <option value="all">All</option>
+            <option value="frontend">Frontend</option>
+            <option value="fullstack">Fullstack</option>
+            <option value="uiux">UI/UX</option>
+          </select>
+        </label>
+        <label class="search">
+          <input id="searchInput" type="search" placeholder="Search projects..." aria-label="Search projects">
+        </label>
+      </div>
+
+      <div id="projectGrid" class="grid">
+        <!-- Project cards populated by JS -->
+      </div>
     </section>
 
     <section id="skills" class="section">
-        <h2 class="section-title">My <span class="highlight">Skills</span></h2>
-        <div class="skills-container">
-            <div class="skill-card">
-                <i class="fab fa-html5"></i>
-                <h3>HTML5</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-css3-alt"></i>
-                <h3>CSS3</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-js"></i>
-                <h3>JavaScript</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-java"></i>
-                <h3>Java</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fab fa-php"></i>
-                <h3>PHP</h3>
-            </div>
-            <div class="skill-card">
-                <i class="fas fa-database"></i>
-                <h3>MySQL</h3>
-            </div>
+      <div class="section-header">
+        <h2>Skills</h2>
+        <p>Tools and technologies I use regularly.</p>
+      </div>
+
+      <div class="skills-grid">
+        <div class="skill-card">
+          <h3>Frontend</h3>
+          <ul class="tags">
+            <li>HTML5</li>
+            <li>CSS3</li>
+            <li>JavaScript</li>
+            <li>React</li>
+            <li>Tailwind</li>
+          </ul>
         </div>
+        <div class="skill-card">
+          <h3>Backend</h3>
+          <ul class="tags">
+            <li>Node.js</li>
+            <li>Express</li>
+            <li>REST APIs</li>
+            <li>MongoDB</li>
+          </ul>
+        </div>
+        <div class="skill-card">
+          <h3>Workflow</h3>
+          <ul class="tags">
+            <li>Git</li>
+            <li>CI/CD</li>
+            <li>Testing</li>
+            <li>Figma</li>
+          </ul>
+        </div>
+      </div>
     </section>
 
     <section id="contact" class="section">
-        <h2 class="section-title">Get In <span class="highlight">Touch</span></h2>
-        <div class="contact-container glass">
-            <form>
-                <input type="text" placeholder="Your Name" required>
-                <input type="email" placeholder="Your Email" required>
-                <textarea rows="5" placeholder="Your Message"></textarea>
-                <button type="submit" class="btn">Send Message</button>
-            </form>
+      <div class="section-header">
+        <h2>Contact</h2>
+        <p>Want to collaborate or have a project in mind? Let’s talk.</p>
+      </div>
+      <form class="contact-form" onsubmit="event.preventDefault(); alert('Thanks for reaching out!');">
+        <div class="form-row">
+          <label>
+            <span>Name</span>
+            <input type="text" required placeholder="Your name">
+          </label>
+          <label>
+            <span>Email</span>
+            <input type="email" required placeholder="you@example.com">
+          </label>
         </div>
+        <label class="full">
+          <span>Message</span>
+          <textarea rows="5" required placeholder="Tell me about your project..."></textarea>
+        </label>
+        <button type="submit" class="btn btn-primary">Send</button>
+      </form>
     </section>
+  </main>
 
-    <footer>
-        <p>Created for TechnoHacks Internship Task 9</p>
-    </footer>
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Harmin Patel • Built with care</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
